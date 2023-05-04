@@ -8,7 +8,22 @@ export default class FOOTER extends HTMLElement{
     constructor() {
         super()
         this.attachShadow({mode: 'open'})
-        Promise.resolve(FOOTER.component_footer()).then(html => this.shadowRoot.innerHTML = html)
+    }
+
+    handleEvent(e) {
+        (e.type === 'click') ? this.clickEvent(e) : false
+    }
+
+    clickEvent(e) {
+        window.alert('le diste click a footer')
+    }
+
+    connectedCallback() {
+        Promise.resolve(FOOTER.component_footer()).then(html => {
+            this.shadowRoot.innerHTML = html
+            let title = this.shadowRoot.querySelector('.selection_title')
+            title.addEventListener('click', this)
+        })
     }
 }
 

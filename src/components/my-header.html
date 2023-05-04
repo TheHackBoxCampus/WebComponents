@@ -1,5 +1,8 @@
 <div class="container">
-    <h1>Header!</h1>
+    <div class="div">
+        <h1>Header!</h1>
+        <button class="selection_title">Header</button>
+    </div>
 </div>
 
 <style>
@@ -11,5 +14,26 @@
         align-items: center;
         margin-top: 1em;
         background-color: red;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em
+    }
+
+    .div button {
+        color: #fff;
+        background: #000;
+        padding: 1em;
+        border:none;
+        outline: none;
+        cursor: pointer;
+        transition: 300ms ease
+    }
+
+    .div button:hover {
+        color: #000;
+        background: #fff;
     }
 </style>

@@ -1,5 +1,8 @@
 <div class="container">
-    <h1>Footer!</h1>
+    <div class="div">
+        <h1>Footer!</h1>
+        <button class="selection_title">Footer</button>
+    </div>
 </div>
 
 <style>
@@ -10,5 +13,27 @@
         text-align: center;
         line-height: 100px;
         background-color: rgb(42, 175, 168);
+    }
+
+    .div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em
+    }
+
+    .div button {
+        color: #fff;
+        background: #000;
+        padding: 1em;
+        border:none;
+        outline: none;
+        cursor: pointer;
+        transition: 300ms ease
+    }
+
+    .div button:hover {
+        color: #000;
+        background: #fff;
     }
 </style>
